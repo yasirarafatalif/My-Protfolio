@@ -60,9 +60,9 @@ const Projects = () => {
           key={project.id}
           onMouseEnter={() => setHoveredId(project.id)}
           onMouseLeave={() => setHoveredId(null)}
-          className={`group border border-border hover:cursor-pointer rounded-2xl overflow-hidden transition-all duration-300 ${
+          className={`group border  hover:cursor-pointer rounded-2xl overflow-hidden transition-all duration-300 ${
             hoveredId === project.id
-              ? "border-primary bg-card/60"
+              ? "border-[#009c8d] bg-card/60"
               : "bg-card/30 hover:border-primary/50"
           }`}
         >
@@ -105,8 +105,8 @@ const Projects = () => {
                   key={tag}
                   className={`px-3 py-1 text-xs rounded-full font-medium transition-colors ${
                     hoveredId === project.id
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-primary/10 text-primary"
+                      ? "text-black bg-[#009c8d]"
+                      : "bg-primary/10 text-[#009c8d]"
                   }`}
                 >
                   {tag}
