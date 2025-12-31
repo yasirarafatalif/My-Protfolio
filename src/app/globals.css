@@ -1,4 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui" {
   themes: dark --default;
+
+  --color-primary: oklch(0.6 0.15 185.5);
+  --muted: oklch(0.2 0 0);
 }
+
+

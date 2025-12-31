@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa"
 
 const Footer = () => {
    return (
@@ -9,7 +10,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-3">
             <h3 className="font-bold text-lg text-foreground">Yasir Arafat Alif</h3>
-            <p className="text-sm text-muted-foreground">Full-stack developer crafting modern web experiences</p>
+            <p className="text-sm text-muted-foreground">Front-End-Developer crafting modern web experiences</p>
           </div>
 
           {/* Navigation Links */}
@@ -45,19 +46,39 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">Connect</h4>
-            <div className="flex flex-col gap-3 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors w-fit">
-                GitHub
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors w-fit">
-                LinkedIn
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors w-fit">
-                Twitter
-              </a>
-            </div>
-          </div>
+  <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">
+    Connect
+  </h4>
+
+  <div className="flex flex-col gap-3 text-sm">
+    <a
+      href="https://github.com/yasirarafatalif"
+      className="flex items-center gap-2 w-fit
+      text-muted-foreground hover:text-primary transition-colors"
+    >
+      <FaGithub className="text-base" />
+      GitHub
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/yasir-arafat-alif-b73944275/"
+      className="flex items-center gap-2 w-fit
+      text-muted-foreground hover:text-primary transition-colors"
+    >
+      <FaLinkedin className="text-base" />
+      LinkedIn
+    </a>
+
+    <a
+      href="#"
+      className="flex items-center gap-2 w-fit
+      text-muted-foreground hover:text-primary transition-colors"
+    >
+      <FaFacebook className="text-base" />
+      Facebook
+    </a>
+  </div>
+</div>
         </div>
 
         {/* Divider */}

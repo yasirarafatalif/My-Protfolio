@@ -1,41 +1,39 @@
 "use client"
 
+import React, { useState } from 'react';
+import nagorikImage from '../../assets/nagorik.png'
+import importImage from '../../assets/import.png'
+import appfindImage from '../../assets/appfind.png'
+import Image from 'next/image';
+import ViewButtons from '../buttons/ViewButtons';
+
 const PROJECTS = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with product catalog, shopping cart, and payment integration.",
-    image: "/e-commerce-dashboard.jpg",
+    title: "NagorikSheba Platform",
+    description: "A modern digital platform that allows citizens to report public infrastructure issues (like broken roads, streetlights, garbage overflow, water leakage, etc.) and enables government admins & staff to manage, track, and resolve those issues efficiently.",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    year: 2024,
+    year: 2025,
+    image: nagorikImage
   },
   {
     id: 2,
     title: "Task Management App",
-    description: "Collaborative task management application with real-time updates and team features.",
-    image: "/task-management-board.jpg",
-    tags: ["Next.js", "Firebase", "Tailwind CSS"],
-    year: 2023,
+    description: "This project is a web application through which users can view various products, import them for personal use, and export (sell or supply) new products to the platform.",
+    image: importImage,
+    tags: ["React", "Firebase","Node.js", "MongoDB", "Tailwind CSS"],
+    year: 2025,
   },
   {
     id: 3,
-    title: "Analytics Dashboard",
-    description: "Data visualization dashboard with interactive charts and real-time metrics.",
-    image: "/analytics-dashboard.png",
-    tags: ["React", "TypeScript", "D3.js", "PostgreSQL"],
+    title: "App Find Management",
+    description: "At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.",
+    image:appfindImage,
+    tags: ["React", "JavaScript", "MongoDB"],
     year: 2023,
-  },
-  {
-    id: 4,
-    title: "Social Network",
-    description: "Social platform with user profiles, messaging, and content sharing capabilities.",
-    image: "/social-network-profile.jpg",
-    tags: ["Next.js", "Supabase", "WebSocket"],
-    year: 2024,
   },
 ]
 
-import React, { useState } from 'react';
 
 const Projects = () => {
 //    const [hoveredId, setHoveredId] = useState<number | null>(null)
@@ -68,13 +66,24 @@ const Projects = () => {
         >
           {/* Image */}
           <div className="relative h-52 overflow-hidden">
-            <img
+            <Image
+  src={project.image || '../../assets/image.png'}
+  alt={project.title}
+  fill
+  className={`object-cover transition-transform duration-500 ${
+    hoveredId === project.id ? "scale-110" : "scale-100"
+  }`}
+  sizes="(max-width: 768px) 100vw, 50vw"
+  priority={hoveredId === project.id}
+/>
+
+            {/* <img
               src={project.image || "/placeholder.svg"}
               alt={project.title}
               className={`w-full h-full object-cover transition-transform duration-500 ${
                 hoveredId === project.id ? "scale-110" : "scale-100"
               }`}
-            />
+            /> */}
           </div>
 
           {/* Content */}
@@ -94,12 +103,12 @@ const Projects = () => {
               </span>
             </div>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm  text-muted-foreground leading-relaxed">
               {project.description}
             </p>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2 pt-2">
+            <div className="flex  flex-wrap gap-2 pt-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -112,6 +121,10 @@ const Projects = () => {
                   {tag}
                 </span>
               ))}
+            </div>
+            <div className='flex gap-3'>
+              <ViewButtons></ViewButtons>
+              <button className='btn btn-primary'>Live Demo</button>
             </div>
           </div>
         </div>
