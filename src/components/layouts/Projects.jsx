@@ -6,10 +6,15 @@ import importImage from '../../assets/import.png'
 import appfindImage from '../../assets/appfind.png'
 import Image from 'next/image';
 import ViewButtons from '../buttons/ViewButtons';
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
+import Link from 'next/link';
+
 
 const PROJECTS = [
   {
     id: 1,
+    gitlink:'https://github.com/yasirarafatalif/Dncc-Reports.git',
+    livedemo:'https://nagoriksheba.netlify.app',
     title: "NagorikSheba Platform",
     description: "A modern digital platform that allows citizens to report public infrastructure issues (like broken roads, streetlights, garbage overflow, water leakage, etc.) and enables government admins & staff to manage, track, and resolve those issues efficiently.",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
@@ -18,6 +23,8 @@ const PROJECTS = [
   },
   {
     id: 2,
+    gitlink:'https://github.com/yasirarafatalif/Import-Export-product.git',
+    livedemo:'https://candid-cheesecake-6bcc89.netlify.app',
     title: "Task Management App",
     description: "This project is a web application through which users can view various products, import them for personal use, and export (sell or supply) new products to the platform.",
     image: importImage,
@@ -26,6 +33,8 @@ const PROJECTS = [
   },
   {
     id: 3,
+    gitlink:'https://github.com/yasirarafatalif/App-find.git',
+    livedemo:'https://serene-blancmange-80a97c.netlify.app',
     title: "App Find Management",
     description: "At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.",
     image:appfindImage,
@@ -122,10 +131,48 @@ const Projects = () => {
                 </span>
               ))}
             </div>
-            <div className='flex gap-3'>
-              <ViewButtons></ViewButtons>
-              <button className='btn btn-primary'>Live Demo</button>
-            </div>
+
+
+<div className="flex gap-4">
+  {/* GitHub */}
+  <Link
+    href={project.gitlink || "#"}
+    target="_blank"
+    className="
+      flex items-center gap-2
+      px-5 py-2.5
+      rounded-lg
+      border border-border
+      text-sm font-medium
+      text-foreground
+      hover:bg-base-200
+      transition-all duration-300
+    "
+  >
+    <FaGithub className="text-base" />
+    View Code
+  </Link>
+
+  {/* Live Demo */}
+  <Link
+    href={project.livedemo || "#"}
+    target="_blank"
+    className="
+      flex items-center gap-2
+      px-5 py-2.5
+      rounded-lg
+      bg-primary text-primary-content
+      text-sm font-medium
+      hover:bg-primary/90
+      transition-all duration-300
+    "
+  >
+    <FaExternalLinkAlt className="text-sm" />
+    Live Demo
+  </Link>
+</div>
+
+
           </div>
         </div>
       ))}
