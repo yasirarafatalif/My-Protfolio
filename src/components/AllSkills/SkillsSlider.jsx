@@ -1,4 +1,4 @@
-"use client"
+
 import {
   SiJavascript,
   SiReact,
@@ -24,7 +24,7 @@ const skills = [
 
 
   return (
-    <section className="max-w-6xl mx-auto bg-[#272730] px-6 py-20">
+    <section className="max-w-6xl mx-auto rounded-2xl border  border-secondary dark:bg-[#272730] px-6 py-10">
       {/* Title */}
       <div className="text-center mb-14">
         <h2 className="text-4xl text-primary font-bold mt-2">My Skills</h2>
@@ -34,8 +34,8 @@ const skills = [
         {/* Left: Icons */}
 <div>
   {/* TOP ROW – Left to Right */}
-<marquee behavior="scroll" direction="left" scrollAmount="5">
-  <div className="flex items-center gap-6 py-6">
+<marquee behavior="scroll" direction="left" >
+  <div className="flex items-center gap-6 py-9">
     {[...skills, ...skills].map((skill, i) => {
       const Icon = skill.icon
       const Color = skill.color
@@ -89,8 +89,8 @@ const skills = [
 
 
 {/* BOTTOM ROW – Right to Left */}
-<marquee behavior="scroll" direction="right" scrollAmount="5">
-  <div className="flex items-center gap-6 py-6">
+<marquee behavior="scroll" direction="right" >
+  <div className="flex items-center gap-6 py-9">
     {[...skills, ...skills].map((skill, i) => {
       const Icon = skill.icon
       const Color = skill.color
@@ -147,24 +147,24 @@ const skills = [
 
 
         {/* Right: Text */}
-        <div className="space-y-4 text-gray-300">
-  <p>
-    <span className="font-semibold text-white">Front-End:</span>{" "}
+        <div className="space-y-4 border-l-2 border-[#009c8d] pl-4  hover:border-[#009c8d]/80 transition-colors  dark:text-gray-300">
+  <p className="text-secondary">
+    <span className="font-semibold text-accent  dark:text-white">Front-End:</span>{" "}
     HTML, CSS, JavaScript, React, Next
   </p>
 
-  <p>
-    <span className="font-semibold text-white">Back-End:</span>{" "}
+  <p className="text-secondary">
+    <span className="font-semibold text-accent dark:text-white">Back-End:</span>{" "}
     Node.js, Express
   </p>
 
-  <p>
-    <span className="font-semibold text-white">Databases:</span>{" "}
+  <p className="text-secondary">
+    <span className="font-semibold text-accent dark:text-white">Databases:</span>{" "}
     MongoDB
   </p>
 
-  <p>
-    <span className="font-semibold text-white">
+  <p className="text-secondary">
+    <span className="font-semibold  text-accent dark:text-white">
       Tools & Platforms:
     </span>{" "}
     Git, VS Code, Vite, Figma, Vercel

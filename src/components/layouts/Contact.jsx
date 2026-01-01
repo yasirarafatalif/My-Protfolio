@@ -25,11 +25,11 @@ const Contact = () => {
     }, 3000)
   }
      return (
-    <section id="contact" className="max-w-6xl mx-auto px-6 py-28">
+    <section id="contact" className="max-w-6xl mx-auto px-6 py-10">
       <div className="space-y-14">
         <div className="space-y-4">
-          <h2 className="text-5xl font-bold text-foreground">Let's Work Together</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <h2 className="text-5xl font-bold text-primary">Let's Work Together</h2>
+          <p className="text-lg text-secondary max-w-2xl">
             Have a project in mind or want to collaborate? I'd love to hear from you.
           </p>
         </div>
@@ -41,14 +41,14 @@ const Contact = () => {
               <h3 className="text-sm uppercase tracking-wide font-semibold text-primary">Email</h3>
               <a
                 href="mailto:yasir@example.com"
-                className="text-lg text-foreground hover:text-primary transition-colors font-medium"
+                className="text-lg text-secondary hover:text-primary transition-colors font-medium"
               >
-                yasir@example.com
+                yasirarafatalif1@gmail.com
               </a>
             </div>
             <div className="space-y-3">
               <h3 className="text-sm uppercase tracking-wide font-semibold text-primary">Location</h3>
-              <p className="text-muted-foreground">Your City, Your Country</p>
+              <p className="text-secondary">Faidabad,Uttara ,Dhaka , Bangladesh</p>
             </div>
             <div className="space-y-4">
               <h3 className="text-sm uppercase tracking-wide font-semibold text-primary">Social</h3>
@@ -69,7 +69,7 @@ const Contact = () => {
           {/* Contact Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label htmlFor="name" className="block text-sm font-medium text-foreground">
+              <label htmlFor="name" className="block text-sm font-medium text-secondary">
                 Name
               </label>
               <input
@@ -79,12 +79,12 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors"
+                className="w-full px-4 py-3 border border-border rounded-lg bg-card text-secondary placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors"
                 placeholder="Your name"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="email" className="block text-sm font-medium text-foreground">
+              <label htmlFor="email" className="block text-sm font-medium text-secondary">
                 Email
               </label>
               <input
@@ -94,12 +94,12 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors"
+                className="w-full px-4 py-3 border border-border rounded-lg bg-card text-secondary placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors"
                 placeholder="your@email.com"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="subject" className="block text-sm font-medium text-foreground">
+              <label htmlFor="subject" className="block text-sm font-medium text-secondary">
                 Subject
               </label>
               <input
@@ -109,12 +109,12 @@ const Contact = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors"
+                className="w-full px-4 py-3 border border-border rounded-lg bg-card text-secondary placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors"
                 placeholder="Project inquiry"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="message" className="block text-sm font-medium text-foreground">
+              <label htmlFor="message" className="block text-sm font-medium text-secondary">
                 Message
               </label>
               <textarea
@@ -124,7 +124,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 border border-border rounded-lg bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors resize-none"
+                className="w-full px-4 py-3 border border-border rounded-lg bg-card text-secondary placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-colors resize-none"
                 placeholder="Tell me about your project..."
               />
             </div>

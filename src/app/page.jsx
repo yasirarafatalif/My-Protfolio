@@ -4,18 +4,17 @@ import Hero from "@/components/layouts/Hero";
 import Projects from "@/components/layouts/Projects";
 import Resume from "@/components/layouts/Resume";
 
-
 export default function Home() {
   return (
    <div>
-    <div>
+    <div className="mt-10 pb-10">
       <Hero></Hero>
     </div>
-    <div>
+    <div className="pb-10">
       <Projects></Projects>
     </div>
     <div>
-      <SkillsSlider></SkillsSlider>
+      <SkillsSlider/>
     </div>
     <div>
       <Resume></Resume>
@@ -23,6 +22,7 @@ export default function Home() {
     <div>
       <Contact></Contact>
     </div>
+  
    </div>
   );
 }

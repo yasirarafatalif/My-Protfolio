@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa"
 
 const Footer = () => {
    return (
-    <footer className="border-t border-[#009c8d]  bg-card/50 mt-28">
+    <footer className="border-t border-[#009c8d] text-secondary bg-card/50 mt-10">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
