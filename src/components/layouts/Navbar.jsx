@@ -73,7 +73,7 @@ const Navbar = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-2 text-xl font-bold text-primary"
           >
-            <FaCode className="text-primary dark:text-white" />
+            <FaCode className="text-primary " />
             Yasir
           </button>
 
@@ -103,13 +103,13 @@ const Navbar = () => {
 
           {/* Mobile Icons */}
           <div className="md:hidden flex items-center gap-4">
-            <button onClick={toggleTheme} className="text-xl text-white">
+            <button onClick={toggleTheme} className="text-xl  text-black dark:text-white">
               {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
             </button>
 
             <button
               onClick={() => setOpen(true)}
-              className="text-white text-2xl"
+              className="text-dark :text-white text-2xl"
             >
               <HiMenuAlt3 />
             </button>
